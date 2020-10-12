@@ -11,7 +11,7 @@ LDFLAGS       ?= -w -s
 
 CLOUD_IMAGE   ?= grepplabs/aws-sso:$(TAG)
 
-ROOT_DIR      := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+ROOT_DIR      := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 default: build
 
